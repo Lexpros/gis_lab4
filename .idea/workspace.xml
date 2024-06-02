@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="">
+    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="Work branch created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Poly_GON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Poly_GON.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures.py" beforeDir="false" afterPath="$PROJECT_DIR$/figures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,21 +23,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Lexpros"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lexpros&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lexpros/gis_lab4.git",
-    "accountId": "03312cac-204a-4423-949a-1dcb3739faa6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lexpros/gis_lab4.git&quot;,
+    &quot;accountId&quot;: &quot;03312cac-204a-4423-949a-1dcb3739faa6&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -49,9 +57,9 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;fresh-updates&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/ProgrammingProjects/Study/GIS/gis_lab3&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;diff.external&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RunManager" selected="Python.main">
@@ -122,6 +130,52 @@
       <option name="presentableId" value="Default" />
       <updated>1715509040898</updated>
     </task>
+    <task id="LOCAL-00001" summary="Work branch created">
+      <option name="closed" value="true" />
+      <created>1717326662112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717326662112</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Work branch created">
+      <option name="closed" value="true" />
+      <created>1717326685923</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717326685923</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Work branch created">
+      <option name="closed" value="true" />
+      <created>1717326743852</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717326743852</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Work branch created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work branch created" />
   </component>
 </project>

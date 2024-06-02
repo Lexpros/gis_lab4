@@ -4,7 +4,7 @@ from shapely import affinity
 GM = (sqrt(5)-1.0)/2.0
 W = 8.0
 H = W*GM
-SIZE = (2, 10)
+SIZE = (10, 5)
 
 BLUE = '#6699cc'
 GRAY = '#999999'
