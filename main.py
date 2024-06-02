@@ -5,11 +5,11 @@ from shapely.plotting import plot_polygon, plot_line, plot_points
 from shapely import Polygon, MultiPolygon, centroid, distance, area, difference, equals
 import pandas as pd
 import numpy as np
+from prettytable import PrettyTable
 
 
 # Метрика построенная на дистанции и площади
 def metric_one(df):
-    # abs(df[2][-1] - i)
     df_for_edit = df.copy()
     properties = {'Dif of nodes': [abs(df_for_edit.iloc[-1, 2] - df_for_edit.iloc[i, 2]) for i in range(len(df_for_edit))]}
     df_for_edit = df_for_edit.drop(['Nodes count'], axis=1)
@@ -21,7 +21,7 @@ def metric_one(df):
     for i in range(len(df_for_edit)):
         df_for_edit.iloc[i, -1] = trust
         trust -= 1
-    # population = 
+    mytable = PrettyTable()
     print(df_for_edit)
     return np.mean([df_for_edit.iloc[0, -2], df_for_edit.iloc[1, -2]])
 
@@ -84,6 +84,7 @@ for i in range(len(polygons)):
     print(equals(poly_for_anal, polygons[i]))
 
 plot_polygon(ob, add_points=False)
+plot_polygon(poly_for_anal, add_points=False, color=RED)
 plot_points(centroids, color=RED)
 ax.get_yaxis().set_visible(False)
 ax.get_xaxis().set_visible(False)
@@ -98,12 +99,6 @@ best_square = {np.where(dif_areas == np.min(dif_areas))[0][0] + 1: np.min(dif_ar
 # print(f'Область анализа: площадь {area(poly_for_anal)}')        
 # print(f'Ближайшая по расстоянию - {min_dist}')
 # print(f'Ближайшая по площади - {best_square}')  # I'm done
-print()
-plt.title('пофтафтье максямумь, позазуста! 😭 иначе мЫ ВАС ВЫЕБЕМ!!! 😡😡')
-# plt.show()
-# Лёх, запусти, плз
-# 
-
 
 # Pandas Time!!!!
 # 
@@ -112,11 +107,10 @@ cool_dict = {'Figure': [i + 1 for i in range(len(polygons))],
              'Nodes count': [len(list(polygons[i].exterior.coords)) for i in range(len(polygons))],
              'Distance': [i for i in target_dist],
              'Population': [250, 10000, 100000, 100, None],
-             'DOVERIE': [0 for i in range(len(polygons))]}
+             'Similarities': [0 for i in range(len(polygons))]}
 df = pd.DataFrame(cool_dict)
 
 print(metric_one(df))
 print(metic_two(df))
-# print(df[::])
-
-# Кто прочитал - тот крутой!
+plt.title('пофтафтье максямумь, позазуста! 😭')
+plt.show()

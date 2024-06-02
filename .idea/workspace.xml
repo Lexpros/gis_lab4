@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="NAKANETSTA ONO RABOTAYET~!!!!!" />
+    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="ONO RABOTAET 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717354385062</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ONO RABOTAET 2">
+      <option name="closed" value="true" />
+      <created>1717355291024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717355291024</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +208,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work branch created" />
     <MESSAGE value="NAKANETSTA ONO RABOTAYET~!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="NAKANETSTA ONO RABOTAYET~!!!!!" />
+    <MESSAGE value="ONO RABOTAET 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="ONO RABOTAET 2" />
   </component>
 </project>
