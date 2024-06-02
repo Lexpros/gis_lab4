@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="Work branch created">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Poly_GON.py" beforeDir="false" afterPath="$PROJECT_DIR$/Poly_GON.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures.py" beforeDir="false" afterPath="$PROJECT_DIR$/figures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="427bc0f9-1905-441b-9c65-f970bc3779d8" name="Changes" comment="NAKANETSTA ONO RABOTAYET~!!!!!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717326743852</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Work branch created">
+      <option name="closed" value="true" />
+      <created>1717354335863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717354335863</updated>
+    </task>
+    <task id="LOCAL-00005" summary="NAKANETSTA ONO RABOTAYET~!!!!!">
+      <option name="closed" value="true" />
+      <created>1717354385062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717354385062</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,9 +184,19 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Work branch created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Work branch created" />
+    <MESSAGE value="NAKANETSTA ONO RABOTAYET~!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="NAKANETSTA ONO RABOTAYET~!!!!!" />
   </component>
 </project>

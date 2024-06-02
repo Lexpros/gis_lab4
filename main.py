@@ -14,9 +14,18 @@ def metric_one(df):
     properties = {'Dif of nodes': [abs(df_for_edit.iloc[-1, 2] - df_for_edit.iloc[i, 2]) for i in range(len(df_for_edit))]}
     df_for_edit = df_for_edit.drop(['Nodes count'], axis=1)
     df_for_edit.insert(2, 'Dif of nodes',  pd.Series(properties['Dif of nodes']))
+    sort_by = ['Dif of nodes', 'Distance']
+    df_for_edit.drop(df.tail(1).index, inplace=True)    
+    df_for_edit = df_for_edit.sort_values(by=sort_by)
+    trust = len(df_for_edit)
+    for i in range(len(df_for_edit)):
+        df_for_edit.iloc[i, -1] = trust
+        trust -= 1
+    # population = 
     print(df_for_edit)
+    return np.mean([df_for_edit.iloc[0, -2], df_for_edit.iloc[1, -2]])
+
     
-    return 0
 
 
 def metic_two(xz_frame):
@@ -26,10 +35,10 @@ def metic_two(xz_frame):
     new_df.sort_values(by=sort_by)
     trust = len(new_df)
     for i in range(len(new_df)):
-        new_df[-1][i] = trust
+        new_df.iloc[i, -1] = trust
         trust -= 1
     print(new_df)
-    return new_df
+    return np.mean([new_df.iloc[0, -2], new_df.iloc[1, -2]])
 
 
 fig = plt.figure(1, figsize=SIZE, dpi=90)
@@ -105,7 +114,9 @@ cool_dict = {'Figure': [i + 1 for i in range(len(polygons))],
              'Population': [250, 10000, 100000, 100, None],
              'DOVERIE': [0 for i in range(len(polygons))]}
 df = pd.DataFrame(cool_dict)
-metric_one(df)
+
+print(metric_one(df))
+print(metic_two(df))
 # print(df[::])
 
 # Кто прочитал - тот крутой!
