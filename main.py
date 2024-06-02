@@ -1,41 +1,38 @@
 import matplotlib.pyplot as plt
-from figures import SIZE, BLUE, GRAY, RED
-from shapely.geometry import LineString, Point, MultiPoint, MultiLineString
-from shapely.plotting import plot_polygon, plot_line, plot_points
-from shapely import Polygon, MultiPolygon, centroid, distance, area, difference, equals
+from figures import SIZE, RED, BLACK
+from shapely.plotting import plot_polygon, plot_points
+from shapely import Polygon, MultiPolygon, MultiPoint, centroid, distance, area
 import pandas as pd
 import numpy as np
-from prettytable import PrettyTable
 
 
-# Метрика построенная на дистанции и площади
-def metric_one(df):
-    df_for_edit = df.copy()
-    properties = {'Dif of nodes': [abs(df_for_edit.iloc[-1, 2] - df_for_edit.iloc[i, 2]) for i in range(len(df_for_edit))]}
+# Метрика построенная на форме и дистанции
+def metric_one(df_s):
+    df_for_edit = df_s.copy()
+    properties = {'Dif of nodes': [abs(df_for_edit.iloc[-1, 2] - df_for_edit.iloc[k, 2])
+                                   for k in range(len(df_for_edit))]}
     df_for_edit = df_for_edit.drop(['Nodes count'], axis=1)
     df_for_edit.insert(2, 'Dif of nodes',  pd.Series(properties['Dif of nodes']))
     sort_by = ['Dif of nodes', 'Distance']
-    df_for_edit.drop(df.tail(1).index, inplace=True)    
+    df_for_edit.drop(df_s.tail(1).index, inplace=True)
     df_for_edit = df_for_edit.sort_values(by=sort_by)
     trust = len(df_for_edit)
-    for i in range(len(df_for_edit)):
-        df_for_edit.iloc[i, -1] = trust
+    for n in range(len(df_for_edit)):
+        df_for_edit.iloc[n, -1] = trust
         trust -= 1
-    mytable = PrettyTable()
     print(df_for_edit)
     return np.mean([df_for_edit.iloc[0, -2], df_for_edit.iloc[1, -2]])
 
-    
 
-
+# Метрика, построенная на дистанции и площади
 def metic_two(xz_frame):
     sort_by = ['Distance', 'Square']
     new_df = xz_frame.copy()
     new_df.drop(df.tail(1).index, inplace=True)
     new_df.sort_values(by=sort_by)
     trust = len(new_df)
-    for i in range(len(new_df)):
-        new_df.iloc[i, -1] = trust
+    for m in range(len(new_df)):
+        new_df.iloc[m, -1] = trust
         trust -= 1
     print(new_df)
     return np.mean([new_df.iloc[0, -2], new_df.iloc[1, -2]])
@@ -77,15 +74,15 @@ poly_for_anal = Polygon(crds_for_anal)
 # Лёх, привет. Ты крутой.
 
 polygons = [poly_1, poly_2, poly_3, poly_4, poly_for_anal]
-centroids = [centroid(i) for i in polygons]  # Центроиды полигонов
+centroids = [i.centroid for i in polygons]  # Центроиды полигонов
 
 ob = MultiPolygon(polygons)
-for i in range(len(polygons)):
-    print(equals(poly_for_anal, polygons[i]))
+points_of_centroids = MultiPoint(centroids)
 
 plot_polygon(ob, add_points=False)
-plot_polygon(poly_for_anal, add_points=False, color=RED)
-plot_points(centroids, color=RED)
+plot_polygon(poly_for_anal, add_points=False, color=BLACK)
+plot_polygon(poly_for_anal, add_points=False, color=BLACK)
+plot_points(points_of_centroids, color=RED)
 ax.get_yaxis().set_visible(False)
 ax.get_xaxis().set_visible(False)
 plt.grid(color='r', linestyle='-', linewidth=2)
@@ -107,10 +104,19 @@ cool_dict = {'Figure': [i + 1 for i in range(len(polygons))],
              'Nodes count': [len(list(polygons[i].exterior.coords)) for i in range(len(polygons))],
              'Distance': [i for i in target_dist],
              'Population': [250, 10000, 100000, 100, None],
-             'Similarities': [0 for i in range(len(polygons))]}
+             'Similarities': [0 for _ in range(len(polygons))]}
 df = pd.DataFrame(cool_dict)
 
 print(metric_one(df))
 print(metic_two(df))
 plt.title('пофтафтье максямумь, позазуста! 😭')
+print(f'{'*' * 64}')
+cent = [(tuple(centroids[i].coords)[0]) for i in range(len(centroids))]
+x_t = cent[0][0]
+y_t = cent[0][1]
+# print(tuple(centroids[0])[0])
+for i in range(len(cent)-1):
+    x_t = cent[i][0] + 6
+    y_t = cent[i][1]
+    plt.text(x_t, y_t, f'{int(df.iloc[i, -2])}', fontsize=15)
 plt.show()
