@@ -129,4 +129,7 @@ for i in range(len(cent)-1):
     x_t = cent[i][0] + 6
     y_t = cent[i][1]
     plt.text(x_t, y_t, f'{int(df.iloc[i, -2])}', fontsize=15)
+x_t = cent[-1][0] + 6
+y_t = cent[-1][1]
+plt.text(x_t, y_t, f'{int(metric_two(df))}', fontsize=15, color='blue')
 plt.show()
