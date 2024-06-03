@@ -7,7 +7,7 @@ import numpy as np
 
 
 # Метрика построенная на форме и дистанции
-def metric_one(df_s):
+def metric_one(df_s, show = True):
     df_for_edit = df_s.copy()
     properties = {'Dif of nodes': [abs(df_for_edit.iloc[-1, 2] - df_for_edit.iloc[k, 2])
                                    for k in range(len(df_for_edit))]}
@@ -20,12 +20,13 @@ def metric_one(df_s):
     for n in range(len(df_for_edit)):
         df_for_edit.iloc[n, -1] = trust
         trust -= 1
-    print(df_for_edit)
+    if show:
+        print(df_for_edit)
     return np.mean([df_for_edit.iloc[0, -2], df_for_edit.iloc[1, -2]])
 
 
 # Метрика, построенная на дистанции и площади
-def metric_two(xz_frame):
+def metric_two(xz_frame, show = True):
     sort_by = ['Distance', 'Square']
     new_df = xz_frame.copy()
     new_df.drop(df.tail(1).index, inplace=True)
@@ -34,7 +35,8 @@ def metric_two(xz_frame):
     for m in range(len(new_df)):
         new_df.iloc[m, -1] = trust
         trust -= 1
-    print(new_df)
+    if show:
+        print(new_df)
     return np.mean([new_df.iloc[0, -2], new_df.iloc[1, -2]])
 
 
@@ -131,5 +133,5 @@ for i in range(len(cent)-1):
     plt.text(x_t, y_t, f'{int(df.iloc[i, -2])}', fontsize=15)
 x_t = cent[-1][0] + 6
 y_t = cent[-1][1]
-plt.text(x_t, y_t, f'{int(metric_two(df))}', fontsize=15, color='blue')
+plt.text(x_t, y_t, f'{int(metric_two(df, show=False))}', fontsize=15, color='blue')
 plt.show()
